@@ -1,0 +1,64 @@
+<div class="panel panel-default">
+
+
+<app-navbar></app-navbar>
+
+<div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+<div class="col s8 offset-s2">
+    <div class="card">
+        <div class="sm-jumbotron center-align">
+            <h4>Question <i class="small material-icons">format_list_numbered</i></h4>
+        </div>
+        <div class="container">
+            
+            <form [formGroup]="questionForm" (ngSubmit)="onSubmitForm()">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">message</i>
+                        <input id="formuler" type="text" class="validate" formControlName="formuler" [(ngModel)]="question.formuler">
+                        <label for="formuler">Enoncé</label>
+                    </div>
+                </div>
+ 
+                <div formArrayName="proposition">      
+                    <div class="row" *ngFor="let prop of getProposition().controls">
+                        <app-proposition [ourQuestion]="question" ></app-proposition>
+                    </div>
+                   
+                </div> 
+                <div id="toHide" [hidden]="!isHide">
+                    <button type="button" class="waves-effect waves-light btn" (click)="onAddProposition()" >Proposition suivante</button>
+                    <button type="button" class="waves-effect waves-red btn pull right" (click)="onHideButton()">Arrêter proposition</button>
+                </div>
+            <div id="notEnd" [hidden]="!isFinished">
+                <div id="toShow" [hidden]="isHide">
+                    <button class="waves-effect waves-light btn" type="button" (click)="onCreateQuestion()" [disabled]="questionForm.invalid">
+                        Question suivante    
+                    </button>
+                    <button class="waves-effect waves-red btn pull right" type="button" (click)="onStop()">
+                        Arrêter question
+                    </button>
+                </div>
+            </div>
+                <div id="toFinish" [hidden]="isFinished">
+                    <div class="sm-jumbotron2 center-align">
+                        <button class="waves-effect waves-light btn" type="submit">Générer tout 
+                            <i class="small material-icons">storage</i>
+                        </button>
+                    </div>
+                </div>
+                <br>
+            </form>
+
+        </div>
+        <app-footer></app-footer>
+
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+</div>

@@ -1,0 +1,148 @@
+<div class="row">
+  <div class="col s5 offset-s2">
+    <div class="card">
+      <div class="sm-jumbotron2 center-align">
+        <h4>Professor Registration <i class="small material-icons">create</i></h4>
+         </div>
+         <form class="col s12 white" #professorRegistrationForm="ngForm">
+          <div class="row">
+            <div class="input-field col s12">
+              <input type="text" name="nom" [(ngModel)]="professor.lastename">
+              <label><i class="tiny material-icons">accessibility</i>Nom</label>
+            </div>
+          </div>                  
+      
+          <div class="row">
+            <div class="input-field col s12">
+              <input type="text" name="prenom" [(ngModel)]="professor.firstname">
+              <label><i class="tiny material-icons">accessibility</i>Prenom</label>
+            </div>
+          </div>
+
+          <div class="row1">
+
+            <label><i class="tiny material-icons">people</i>Role</label>
+            <select class="browser-default">
+              <option value="" disabled selected>Choisissez votre rôle</option>
+              <option value="1">Professeur</option>
+              <option value="2">Etudiant</option>
+            </select>
+  
+          </div>
+                
+
+            <div class="row">
+                <div class="input-field col s12">
+                  <input type="text" name="email" [(ngModel)]="professor.email" [pattern]="emailPattern">
+                  <label data-error="Invalid email"><i class="tiny material-icons">email</i>Email</label>
+                </div>
+            </div>
+
+            <div class="row">
+
+            <div class="input-field col s12">
+                <input name="motdepasse" [(ngModel)] = "professor.password" type="password" id="inputPassword" required>
+                <label><i class="tiny material-icons">lock_outline</i>Mot de passe</label>
+            </div>
+
+          </div>
+
+          <div class="row ">
+            <div class="input-field col s12">
+                  <input name="motdepasse1" [(ngModel)] = "passwordRepeat" type="password" id="inputPassword2" required>
+                  <label><i class="tiny material-icons">lock</i>Répéter mot de passe</label>
+              </div>
+            </div>
+
+                       
+
+          <div class="row">
+              <div class="input-field col s12">
+                <button class="large btn waves-effect waves-light2" (click)="addUser();" type="submit"><i class="tiny material-icons">create</i>S'inscrire</button>
+              </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+</div>
+<<<<<<< HEAD
+=======
+
+
+<!--
+<div class="col s5 offset-s2">
+  <div class="card">
+    <div class="sm-jumbotron2 center-align">
+      <h4>Inscription  <i class="small material-icons">create</i></h4>
+       </div>
+        <form class="col s12 white" #professorRegistrationForm="ngForm">
+        
+
+          <div class="row">
+
+            <div class="input-field col s12">
+              <input type="text" name="nom" [(ngModel)]="professor.lastename">
+              <label><i class="tiny material-icons">accessibility</i>Nom</label>
+            </div>
+
+        </div>                  
+      
+        <div class="row">
+
+            <div class="input-field col s12">
+              <input type="text" name="prenom" [(ngModel)]="professor.firstname">
+              <label><i class="tiny material-icons">accessibility</i>Prenom</label>
+            </div>
+          </div>
+
+          <div class="row1">
+
+            <label><i class="tiny material-icons">people</i>Role</label>
+            <select class="browser-default">
+              <option value="" disabled selected>Choisissez votre rôle</option>
+              <option value="1">Professeur</option>
+              <option value="2">Etudiant</option>
+            </select>
+  
+          </div>
+                
+
+            <div class="row ">
+                <div class="input-field col s12">
+                  <input type="text" name="email" [(ngModel)]="professor.email" [pattern]="emailPattern">
+                  <label data-error="Invalid email"><i class="tiny material-icons">email</i>Email</label>
+                </div>
+            </div>
+
+            <div class="row ">
+
+            <div class="input-field col s12">
+                <input name="motdepasse" [(ngModel)] = "professor.password" type="password" id="inputPassword" required>
+                <label><i class="tiny material-icons">lock_outline</i>Mot de passe</label>
+            </div>
+
+          </div>
+
+          <div class="row ">
+            <div class="input-field col s12">
+                  <input name="motdepasse1" [(ngModel)] = "professor.password" type="password" id="inputPassword" required>
+                  <label><i class="tiny material-icons">lock</i>Répéter mot de passe</label>
+              </div>
+            </div>
+
+            
+
+              
+
+          <div class="row">
+              <div class="input-field col s12">
+                <button class="large btn waves-effect waves-light2" type="submit"><i class="tiny material-icons">create</i>S'inscrire</button>
+              </div>
+          </div>
+
+        </form>
+    </div>
+  </div>
+-->
+>>>>>>> dc9aa59c8364b44fb8dfb09fdc7600b851506e0d

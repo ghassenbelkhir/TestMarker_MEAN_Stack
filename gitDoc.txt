@@ -1,0 +1,34 @@
+﻿git clone lienFourniParGitHub  : copier un repository sur votre machine
+
+…or create a new repository on the command line
+echo "# Test" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/belkhirghassen/Test.git
+git push -u origin master
+
+
+or push an existing repository from the command line
+git remote add origin https://github.com/belkhirghassen/Test.git
+git push -u origin master  
+
+
+git pull origin master : récupérer en local les dernières modifications du repo GitHub.  ----------> --allow-unrelated-histories
+
+git branch : voir les branches présentes dans votre repo.
+
+git branch nouvelle-branche : créer une nouvelle branche
+
+git checkout nouvelle-branche : Pour vous placer dans une autre branche à l'intérieur de votre repo
+
+git checkout -b ma-branche :  créer une branche et vous y positionner
+
+git checkout brancheA  puis  git merge brancheB : Fusionner des branches est une pratique courante lorsque vous travaillez
+
+
+ sur un projet : vous devez toujours      chercher à remettre les modifications faites sur vos différentes branches dans la branche principale master.  
+
+git reset --hard commitHash
+
+git push origin HEAD --force

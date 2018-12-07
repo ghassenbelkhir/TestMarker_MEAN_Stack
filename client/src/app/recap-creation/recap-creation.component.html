@@ -1,0 +1,56 @@
+<div class="panel panel-default">
+  <app-navbar></app-navbar>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+
+        
+      <div class="row">
+          <div class="col s12">
+            <div class="card">
+              <div class="card-content black-text">
+                  <div class="sm-jumbotron2 center-align">
+                    <h4>Récapitulation</h4>
+                  </div>
+                  <hr>
+                  
+                 <h4>Titre: {{quiz.title}}</h4>
+                  <p>Description: {{quiz.description}}</p>
+                 <p>Date de création: {{quiz.dateCreation}}</p>
+                
+
+                <ul class="collection with-header">
+                  <li class="collection-header" *ngFor="let quest of quiz.listQuestion">
+                    <h5>{{quest.formuler}}</h5>
+                    <ul class="collection">
+                      <li class="collection-item" *ngFor="let prop of quest.listProposition">
+                        {{prop.choice}} - {{prop.isTrue}} - {{prop.point}}
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+               
+               
+              </div>
+              <div class="card-action2">
+               
+                    <div class="col s12 m6 l3"><p></p></div>
+                    <div class="col s12 m6 l3"><p><button class="waves-effect waves-green btn" (click)="validate()">
+                        Valider    
+                    </button></p></div>
+                    <div class="col s12 m6 l3"><p><button class="waves-effect waves-red btn" (click)="discard()">
+                        Annuler   
+                    </button></p></div>
+                    <div class="col s12 m6 l3"><p></p></div>                  
+    
+              </div>
+            </div>
+          </div>
+        </div>
+              
+
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

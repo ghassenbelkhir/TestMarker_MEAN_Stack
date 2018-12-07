@@ -1,0 +1,9 @@
+span.character-counter{
+    display:none;
+}
+
+
+span.character-counter{
+    min-width: 1px;
+  }
+  

@@ -1,0 +1,33 @@
+<div class="z-depth-3">
+    <div>
+        <h5 class="center-align">Proposition </h5>
+    </div>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" >
+
+        <div class="row" class="col s12">
+            <div class="input-field">
+                <i class="material-icons prefix">loupe</i>
+                <input id="choice" type="text" class="form-control" formControlName="choice" [(ngModel)]="newProposition.choice">
+                <label for="choice">Enoncé du choix</label>
+            </div>
+        </div>
+        <div class="row" class="col s12">
+            <div class="col s6">
+                <p>  <i class="small material-icons" id="pFalse">priority_high</i>
+                    Est-ce la réponse? 
+                <input type="checkbox" [(ngModel)]="newProposition.isTrue" class="filled-in" id="isTrue" (blur)="onCheck()" formControlName="isTrue" /> </p>               
+            </div>
+        
+            <div class="input-field col s6">
+                <i class="material-icons prefix">rate_review</i>
+                <input id="point" type="number" class="form-control" formControlName="point" [(ngModel)]="newProposition.point" > 
+                <label for="point">Le barème du choix</label>
+            </div>
+        </div>        
+            <div class="row" class="sm-jumbotron2 center-align"><!-- id="toHide" [hidden]="!isHide"-->
+                <button class="waves-effect waves-light btn" type="submit" [disabled]="form.invalid" >Ajouter 
+                </button>          
+            </div>        
+        <br>
+    </form> 
+</div>

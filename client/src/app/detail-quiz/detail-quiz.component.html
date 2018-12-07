@@ -1,0 +1,17 @@
+
+  <h5>{{quiz._id}} -> {{quiz.title}}</h5>
+  <h1> {{quiz.description}}</h1>
+  <h5> {{quiz.dateCreation}}</h5>
+
+
+  <ul>
+    <li *ngFor="let element of quiz.listQuestion">
+      <h1>Question </h1>
+      {{element.formuler}}
+      <ul>
+        <li *ngFor="let element2 of element.listProposition">
+          {{element2.choice}}, {{element2.isTrue}}, {{element2.point}}
+        </li>
+      </ul>
+    </li>
+  </ul>

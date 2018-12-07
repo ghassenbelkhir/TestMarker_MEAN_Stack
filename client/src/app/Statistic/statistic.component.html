@@ -1,0 +1,52 @@
+<div class="panel panel-default">
+
+<app-navbar></app-navbar>
+
+
+<div class="container">
+    <div class="card">
+        <div class="col-sm-8 col-sm-offset-2">
+            <table>
+                <tr>
+                    <td > <canvas id="goodCanvas1"  aria-label="Hello ARIA World" role="img"></canvas></td>  
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td > 
+                        <canvas id="lolo"></canvas> 
+                    </td>   
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td > 
+                        <canvas id="linec"></canvas> 
+                    </td>
+                </tr>
+            </table>
+            <button class="btn btn-success" (click)="displayStatitic()">
+                <i class="material-icons">call_missed_outgoing</i>
+                statistic</button>
+
+                <div *ngIf="isDisplay === true"></div>
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Note</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor="let student of students">
+                          <td>{{student.name}} </td>
+                          <td> {{student.note}}</td>                
+                      </tr>
+                  </tbody>
+              </table>
+
+              <app-footer></app-footer>
+
+            </div> 
+        </div>
+    </div>

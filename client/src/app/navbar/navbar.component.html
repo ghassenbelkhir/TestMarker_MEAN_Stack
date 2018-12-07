@@ -1,0 +1,80 @@
+<ul id="dropdown1" class="dropdown-content">
+    <li routerLinkActive="active"><a href="http://localhost:4200/home">Acceuil</a></li>
+
+    <!--<li><a routerLink="/profile">Mon Profile</a></li>-->
+        <!--<li><a routerLink="/profile">Mon Profile</a></li>-->
+
+    <li routerLinkActive="active"><a href="http://localhost:4200/profile">Profil Etu</a></li>
+    <li routerLinkActive="active"><a href="http://localhost:4200/profile-teacher">Profil Ens</a></li>
+    <li routerLinkActive="active"><a href="http://localhost:4200/statistic">Statistique</a></li>
+    <li routerLinkActive="active"><a href="#quiz" class="modal-trigger">Créer test</a></li>
+    <li routerLinkActive="active"><a href="http://localhost:4200">Log out</a></li>
+
+  </ul>
+  <nav class="blue">
+      
+    <div class="nav-wrapper">
+  
+      <li routerLinkActive="active" class="brand-logo"><a href="http://localhost:4200/home">TestMaker </a></li>
+       <a routerLink="#" class="sidenav-trigger" data-target="mobile-button" ><i class="material-icons">menu</i></a>
+                  
+
+        <ul class="right hide-on-med-and-down">   
+            
+          <!--<li>    
+                <div class="center row">
+                   <div class="col s12 " >
+                     <div class="row" id="topbarsearch">
+                       <div class="input-field col s6 s12 red-text">
+
+                         <i class="white-text material-icons prefix">search</i>
+                         <input type="text" placeholder="Rechercher" id="autocomplete-input" class="autocomplete white-text" >
+              
+                         </div>
+                       </div>
+                     </div>
+                   </div>          
+                  </li>-->
+
+             <li routerLinkActive="active"><a href="http://localhost:4200/home">Accueil</a></li>
+         <!--<li routerLinkActive="active"><a class="nav-item nav-link" routerLink="/home">Accueil2 </a></li>-->
+             <li routerLinkActive="active"><a href="http://localhost:4200/profile">Mon Profil Etu</a></li>
+             <li routerLinkActive="active"><a href="http://localhost:4200/profile-teacher">Mon Profil Ens</a></li>
+             <li routerLinkActive="active"><a href="#quiz" class="modal-trigger">Créer un questionnaire</a></li>
+             <li routerLinkActive="active"><a href="http://localhost:4200/statistic">Statistique</a></li>
+             <li routerLinkActive="active"><a href="http://localhost:4200">Déconnexion</a></li>
+
+         <!--<li routerLinkActive="active"><a class="dropdown-trigger" routerLink="#!" data-target="dropdown1"><i class="material-icons right">arrow_drop_down</i></a></li>-->
+        </ul>
+  
+
+
+    </div>
+    </nav>
+    
+      <ul class="sidenav" id="mobile-button" >   
+           <!--<li>    
+              <div class="center row">
+                 <div class="col s12 " >
+                   <div class="row" id="topbarsearch">
+                     <div class="input-field col s6 s12 red-text">
+                       <i class="white-text material-icons prefix">search</i>
+                       <input type="text" placeholder="rechercher" id="autocomplete-input" class="autocomplete white-text" >
+                       </div>
+                     </div>
+                   </div>
+                 </div>          
+                </li>-->
+                <li routerLinkActive="active"><a href="http://localhost:4200/home">Accueil</a></li>
+                <li routerLinkActive="active"><a href="http://localhost:4200/profile">Mon Profil Etu</a></li>
+                <li routerLinkActive="active"><a href="http://localhost:4200/profile-teacher">Mon Profil Ens</a></li>
+                <li routerLinkActive="active"><a href="http://localhost:4200/statistic">Statistique</a></li>
+                <li routerLinkActive="active"><a href="http://localhost:4200">Déconnexion</a></li>
+                <li routerLinkActive="active"><a href="#quiz" class="modal-trigger">Creer un Test</a></li>
+     </ul>
+  
+     <!-- modal -->
+     <div class="modal" id="quiz">
+      <app-quiz-program></app-quiz-program>
+     </div>
+     <!-- end modal -->
